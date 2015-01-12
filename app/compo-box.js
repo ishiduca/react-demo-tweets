@@ -8,7 +8,6 @@ module.exports = React.createClass({
     render: function () {
         return (
             <main>
-                <h1>twitter realtime search - &quot;react&quot;</h1>
                 <CompoList data={this.state.data} />
             </main>
         )

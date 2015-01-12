@@ -6,8 +6,11 @@ module.exports = React.createClass({
         var tweet = this.props.data
         return (
             <li className="tweet">
-                <span>{tweet.user.screen_name + '/' + tweet.user.name}</span>
-                <p>{tweet.text}</p>
+                <div className="tweet-mata">
+                    <img src={tweet.user.profile_image_url} />
+                    <span>{tweet.user.screen_name + '/' + tweet.user.name}</span>
+                </div>
+                <blockquote>{tweet.text}</blockquote>
             </li>
         )
     }
