@@ -1,0 +1,36 @@
+{
+  "name": "react-tweets",
+  "version": "0.0.1",
+  "description": "React Example",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.10.7",
+    "hjs": "0.0.6",
+    "react": "^0.12.2",
+    "shoe": "0.0.15",
+    "twitter": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.2.1",
+    "reactify": "^0.17.1"
+  },
+  "scripts": {
+    "build-js": "browserify -t reactify ./app/main.js -o ./public/js/bundle.js",
+    "build": "npm run build-js",
+    "app": "NODE_PATH=lib node app.js &",
+    "start": "npm run build && npm run app"
+  },
+  "author": "ishiduca@gmail.com",
+  "license": "MIT",
+  "config": {
+    "server": {
+      "port": 3000
+    },
+    "static": {
+      "root": "/public"
+    },
+    "sock": {
+      "url": "/echo"
+    }
+  }
+}
