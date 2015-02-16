@@ -5,7 +5,7 @@ var AppStoreList = require('../stores/AppStoreList')
 var AppActionShoe = require('../actions/AppActionShoe')
 
 function setList () {
-    return {list: AppStoreList.getList().reverse()}
+    return {list: AppStoreList.getList().slice(-10).reverse()}
 }
 
 var Box = React.createClass({
