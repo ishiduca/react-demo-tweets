@@ -1,6 +1,6 @@
 {
   "name": "react-tweets",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React Example",
   "main": "app.js",
   "dependencies": {
