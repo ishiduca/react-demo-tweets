@@ -1,8 +1,8 @@
 'use strict'
-var React    = require('react')
-var CompoBox = require('./compo-box')
+var React = require('react')
+var Box   = require('./components/box')
 
 React.render(
-    <CompoBox url="/echo" />
+    <Box />
   , document.querySelector('#content')
 )
