@@ -1,6 +1,7 @@
 'use strict'
 var React = require('react')
-var Item  = React.createClass({
+
+module.exports = React.createClass({
     render: function () {
         var tweet = this.props.data
         var user  = tweet.user
@@ -10,10 +11,10 @@ var Item  = React.createClass({
                     <img src={user.profile_image_url} />
                     <span>{user.screen_name + '/' + user.name}</span>
                 </div>
-                <blockquote>{tweet.text}</blockquote>
+                <blockquote>
+                    {tweet.text}
+                </blockquote>
             </li>
         )
     }
 })
-
-module.exports = Item

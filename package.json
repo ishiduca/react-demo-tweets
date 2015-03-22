@@ -1,17 +1,21 @@
 {
   "name": "react-tweets",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "React Example",
   "main": "app.js",
   "dependencies": {
     "express": "^4.10.7",
     "flux": "^2.0.1",
     "hjs": "0.0.6",
+    "lodash": "^3.5.0",
+    "object-assign": "^2.0.0",
+    "printf": "^0.2.1",
     "react": "^0.12.2",
     "shoe": "0.0.15",
     "twitter": "^1.0.2"
   },
   "devDependencies": {
+    "babelify": "^5.0.3",
     "nodemon": "^1.2.1",
     "reactify": "^0.17.1"
   },
@@ -35,7 +39,7 @@
     },
     "twitter": {
       "request": {
-        "track": "react.js,reactjs,react_js"
+        "track": "react,react-js,reactjs"
       }
     }
   }

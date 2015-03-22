@@ -1,19 +1,11 @@
 'use strict'
 var React = require('react')
-var Box   = require('./components/box')
-var AppActionList = require('./actions/AppActionList')
+var App   = require('./components/app')
+var ActShoe = require('./actions/shoe')
 
-var shoe = require('shoe')
-
-shoe('/echo').on('data', function (chnk) {
-    try {
-        AppActionList.add(JSON.parse(chnk))
-    } catch (err) {
-        console.log(err)
-    }
-})
+window.onload = ActShoe.start
 
 React.render(
-    <Box />
-  , document.querySelector('#content')
+    <App />
+  , document.querySelector("#content")
 )
