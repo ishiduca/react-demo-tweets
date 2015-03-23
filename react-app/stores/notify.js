@@ -10,10 +10,7 @@ var buffer      = []
 
 handle.call(StoreNotify, {get: 'shift'}, buffer)
 
-StoreNotify.dispatchToken = dispatcher.register(function (payload) {
-    var actionType = payload.actionType
-    var value      = payload.value
-
+StoreNotify.dispatchToken = dispatcher.register(function (actionType, value) {
     if ('error.push' === actionType) {
         buffer.push(value)
         StoreNotify.emit('change')

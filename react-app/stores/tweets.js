@@ -12,9 +12,9 @@ var StoreTweets = module.exports = assign({
     }
 }, events.EventEmitter.prototype)
 
-StoreTweets.dispatchToken = dispatcher.register(function (payload) {
-    if ('tweet.push' === payload.actionType) {
-        list.unshift(payload.value)
+StoreTweets.dispatchToken = dispatcher.register(function (actionType, value) {
+    if ('tweet.push' === actionType) {
+        list.unshift(value)
         StoreTweets.emit('change')
     }
 })

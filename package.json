@@ -1,6 +1,6 @@
 {
   "name": "react-tweets",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "React Example",
   "main": "app.js",
   "dependencies": {
@@ -20,7 +20,7 @@
     "reactify": "^0.17.1"
   },
   "scripts": {
-    "build-js": "browserify -t reactify ./app/main.js -o ./public/js/bundle.js",
+    "build-js": "browserify -t reactify ./react-app/main.js -o ./public/js/bundle.js",
     "build": "npm run build-js",
     "app": "NODE_PATH=lib node app.js &",
     "start": "npm run build && npm run app"
